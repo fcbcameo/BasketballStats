@@ -55,7 +55,7 @@ public class PlayerStatsVO : ValueObject
   }
 
   //TODO Check why not ok?
-  protected override IEnumerable<object?> GetEqualityComponents()
+  protected override IEnumerable<object> GetEqualityComponents()
   {
     yield return Points;
     yield return MinutesPlayed;

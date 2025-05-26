@@ -25,6 +25,7 @@ public class Match : EntityBase<Guid>, IAggregateRoot // Match is a clear Aggreg
     SeasonId = seasonId; // Should validate these IDs exist via domain/application service before calling constructor
     TeamId = teamId;
     Guard.Against.Default(TeamId, nameof(TeamId));
+  }
     
   public void AddPlayerPerformance(PlayerMatchPerformance performance)
   {

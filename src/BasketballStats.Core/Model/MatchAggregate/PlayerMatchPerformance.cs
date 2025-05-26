@@ -7,7 +7,7 @@ using BasketballStats.Core.Model.PlayerAggregate;
 using BasketballStats.Core.Model.TeamAggregate;
 
 namespace BasketballStats.Core.Model.MatchAggregate;
-internal class PlayerMatchPerformance : ValueObject
+public class PlayerMatchPerformance : ValueObject
 {
   public Guid PlayerId { get; } // Links to Player entity
   public Guid TeamId { get; }   // Links to Team entity (team player played for in this match)
