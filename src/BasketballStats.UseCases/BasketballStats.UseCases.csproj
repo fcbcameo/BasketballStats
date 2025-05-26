@@ -3,10 +3,15 @@
   <ItemGroup>
     <PackageReference Include="Ardalis.Result" />
     <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BasketballStats.Core\BasketballStats.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Matches\DTOs\" />
   </ItemGroup>
 
 </Project>

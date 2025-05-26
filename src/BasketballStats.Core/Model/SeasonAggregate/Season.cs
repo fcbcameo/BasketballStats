@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BasketballStats.Core.Model.SeasonAggregate;
-public class Season : EntityBase<Guid> // Could be changed to aggregateroot
+public class Season : EntityBase<Guid>, IAggregateRoot // Could be changed to aggregateroot
 {
   public string Name { get; private set; } = string.Empty;
   public DateTime? StartDate { get; private set; }
