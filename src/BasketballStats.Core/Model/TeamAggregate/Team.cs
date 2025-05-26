@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BasketballStats.Core.Model.TeamAggregate;
-public class Team : EntityBase<Guid>
+public class Team : EntityBase<Guid>, IAggregateRoot
 {
   public string Name { get; private set; } = string.Empty;
 
