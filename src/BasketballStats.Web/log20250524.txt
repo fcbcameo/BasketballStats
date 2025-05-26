@@ -1,0 +1,41 @@
+2025-05-24 15:11:44.100 +02:00 [INF] Registered 5 endpoints in 1.978 milliseconds.
+2025-05-24 15:11:44.893 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-05-24 15:11:44.944 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2025-05-24 15:11:45.056 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-05-24 15:11:45.134 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-05-24 15:11:45.140 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-05-24 15:11:45.358 +02:00 [INF] Now listening on: https://localhost:54250
+2025-05-24 15:11:45.361 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-05-24 15:11:45.397 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 15:11:45.397 +02:00 [INF] Hosting environment: Development
+2025-05-24 15:11:45.397 +02:00 [INF] Content root path: C:\Users\michi_9o40b52\source\repos\BasketballStats\src\BasketballStats.Web
+2025-05-24 18:58:58.584 +02:00 [INF] Registered 5 endpoints in 303 milliseconds.
+2025-05-24 18:58:59.078 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-05-24 18:58:59.196 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-05-24 18:58:59.338 +02:00 [INF] Now listening on: https://localhost:57513
+2025-05-24 18:58:59.341 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-05-24 18:58:59.376 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 18:58:59.376 +02:00 [INF] Hosting environment: Development
+2025-05-24 18:58:59.376 +02:00 [INF] Content root path: C:\Users\michi_9o40b52\source\repos\BasketballStats\src\BasketballStats.Web

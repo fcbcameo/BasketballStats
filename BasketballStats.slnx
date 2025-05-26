@@ -1,0 +1,30 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="CleanArchitecture.nuspec" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/BasketballStats.AspireHost/BasketballStats.AspireHost.csproj" />
+    <Project Path="src/BasketballStats.Core/BasketballStats.Core.csproj" />
+    <Project Path="src/BasketballStats.Infrastructure/BasketballStats.Infrastructure.csproj" />
+    <Project Path="src/BasketballStats.ServiceDefaults/BasketballStats.ServiceDefaults.csproj" />
+    <Project Path="src/BasketballStats.UseCases/BasketballStats.UseCases.csproj" />
+    <Project Path="src/BasketballStats.Web/BasketballStats.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BasketballStats.FunctionalTests/BasketballStats.FunctionalTests.csproj">
+      <BuildDependency Project="src/BasketballStats.Web/BasketballStats.Web.csproj" />
+    </Project>
+    <Project Path="tests/BasketballStats.IntegrationTests/BasketballStats.IntegrationTests.csproj">
+      <BuildDependency Project="src/BasketballStats.Infrastructure/BasketballStats.Infrastructure.csproj" />
+    </Project>
+    <Project Path="tests/BasketballStats.UnitTests/BasketballStats.UnitTests.csproj" />
+  </Folder>
+</Solution>
